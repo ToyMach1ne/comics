@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <!-- saved from url=(0014)about:internet -->
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Доставка суши Комикс</title>
+
+  <!-- icons -->
+  <link href="favicon.ico" rel="shortcut icon">
+
+  <!-- css + javascript -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css" media="all">
+
+  <!--[if lt IE 9]>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <style text="css">
+    .load__screen--wrapp {
+  background-color: #00aeee;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+.load__screen--wrapp .load__content--wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.load__screen--wrapp .load__content--wrap .load__text--wrap {
+  background-color: transparent;
+  overflow: visible;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.load__screen--wrapp .load__content--wrap .load__text--wrap h4 {
+  width: 100%;
+  font-size: 10em;
+  margin-bottom: 0;
+  font-family: 'Chewy', cursive;
+}
+.load__screen--wrapp .load__content--wrap .load__text--wrap span {
+  width: 100%;
+  padding-left: 20%;
+  font-size: 3em;
+  font-family: 'Monoton', cursive;
+}
+.load__screen--wrapp .load__content--wrap div {
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: flex-start;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  background-color: #fff;
+}
+.load__screen--wrapp .load__content--wrap div img {
+  max-width: 150px;
+  bottom: 0;
+}
+.load__screen--wrapp .load__content--wrap .superman {
+  align-items: flex-start;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 100% 0;
+}
+.load__screen--wrapp .load__content--wrap .superman img {
+  border-radius: 50%;
+  padding: 5px;
+}
+.load__screen--wrapp .load__content--wrap .deadpool {
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  top: 0;
+  border-radius: 0 0 0 100%;
+}
+.load__screen--wrapp .load__content--wrap .capitan {
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-radius: 100% 0 0 0;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+.load__screen--wrapp .load__content--wrap .batman {
+  align-items: flex-end;
+  border-radius: 0 100% 0 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+  </style>
+
+</head>
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+  <header role="banner">
+    <div class="header__position--wrap">
+      <div class="container">
+        <div class="row">
+          <div class="header--logo col-md-3">
+          	<a href="#" class="order--online">
+          		<p>Order online</p>
+          		 <svg xmlns="http://www.w3.org/2000/svg" viewBox="76.80511474609375 46.68406295776367 178.11782836914062 178.11972045898438" role="img" preserveAspectRatio="xMidYMid meet">
+				    <g>
+				        <path fill-rule="evenodd" clip-rule="evenodd" d="M230.761 192.223c-5.996.735-9.452 4.089-10.365 10.062-.913 5.97-4.335 8.38-10.265 7.228-5.929-1.152-10.252.97-12.965 6.366-2.715 5.396-6.715 6.631-11.998 3.702-5.283-2.928-10.049-2.245-14.299 2.049-4.248 4.293-8.432 4.231-12.553-.187-4.12-4.418-8.863-5.241-14.231-2.47-5.368 2.769-9.329 1.418-11.881-4.057-2.554-5.476-6.811-7.725-12.771-6.748-5.961.976-9.311-1.533-10.047-7.527-.736-5.996-4.09-9.452-10.061-10.365-5.972-.914-8.381-4.336-7.229-10.265 1.153-5.929-.969-10.252-6.366-12.968-5.397-2.712-6.63-6.711-3.703-11.994 2.928-5.284 2.246-10.05-2.048-14.299-4.293-4.25-4.231-8.435.186-12.555 4.418-4.119 5.242-8.862 2.471-14.23-2.771-5.369-1.419-9.329 4.056-11.881 5.475-2.555 7.724-6.811 6.747-12.773-.976-5.96 1.534-9.31 7.53-10.046 5.995-.735 9.45-4.091 10.364-10.061.913-5.972 4.335-8.382 10.264-7.229 5.93 1.153 10.252-.969 12.967-6.365 2.714-5.396 6.712-6.632 11.996-3.703 5.284 2.93 10.05 2.246 14.298-2.047 4.248-4.297 8.434-4.232 12.553.185 4.121 4.418 8.865 5.24 14.232 2.472 5.367-2.772 9.328-1.42 11.882 4.056 2.552 5.475 6.811 7.724 12.771 6.747 5.961-.978 9.31 1.533 10.046 7.529.738 5.996 4.091 9.448 10.062 10.363 5.971.914 8.381 4.334 7.228 10.265-1.152 5.932.97 10.252 6.366 12.966 5.396 2.715 6.631 6.714 3.702 11.996-2.927 5.283-2.245 10.05 2.05 14.3 4.292 4.249 4.23 8.434-.188 12.553s-5.241 8.863-2.469 14.232c2.77 5.366 1.417 9.326-4.058 11.882-5.474 2.552-7.722 6.811-6.747 12.77.976 5.962-1.532 9.308-7.527 10.047z"></path>
+				    </g>
+				</svg>
+          	</a>
+          </div><!-- /header--logo -->
+          <div class="col-md-3 header_info">
+            <div class="header_phones">
+              <a href="tel:+38 (063) 000 00 00">+38 (063) 000 00 00</a>
+              <a href="tel:+38 (063) 000 00 00">+38 (063) 000 00 00</a>
+              <a href="tel:+38 (063) 000 00 00">+38 (063) 000 00 00</a>
+              <span class="open--phones"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
+            </div>
+          </div>
+           <nav class="header--nav col-md-6" role="navigation">
+              <ul class="headnav">
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+                <li><a href="#">menu</a></li>
+              </ul>
+            </nav><!-- /header--nav -->
+        </div><!-- /.row -->
+
+      </div><!-- /.container -->
+    </div><!--header__position--wrap -->
+  </header><!-- /header -->
+
+  <section role="main">
+    <div class="load__screen--wrapp">
+      <div class="load__content--wrap">
+        <div class="load__text--wrap">
+          <h4>Comics</h4>
+          <span>cafe</span>
+        </div>
+        <div class="superman">
+          <img src="img/superman.png" alt="loading image">
+        </div>
+        <div class="deadpool">
+          <img src="img/deadpool.png" alt="loading image">
+        </div>
+        <div class="capitan">
+          <img src="img/capitan.jpg" alt="loading image">
+        </div>
+        <div class="batman">
+          <img src="img/batman.jpg" alt="loading image">
+        </div>
+      </div>
+    </div>
+
+    <div class="first__block--wrap">
+    	<h1>Welcome to our <span>COMICS</span></h1>
+    	<p class="first_undertitle">Feel free to look around</p>
+    	<h4>Ready to see what we offer?</h4>
+    	<p class="second_undertitle">Click the button below</p>
+    	<a href="#" class="to_second">CLICK TO BEGIN</a>
+    </div><!-- first__block--wrap -->
+
+    <div class="second__about--block" id="second--about">
+    	<div class="left-side">
+    		<div class="container left-container">
+    			<div class="row">
+    				<div class="col-md-12">
+    					<h4>ABOUT US</h4>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec mi a ante elementum sollicitudin. Nunc vel tortor mauris. Pellentesque nec placerat tortor. Suspendisse efficitur orci quis nunc consectetur, eget malesuada tellus aliquet. Phasellus ultrices neque a malesuada venenatis. Sed rutrum et nibh ac condimentum. Duis tincidunt, turpis et tincidunt euismod, ipsum quam finibus risus, non pharetra orci urna non nulla. Phasellus ultrices neque a malesuada venenatis. Sed rutrum et nibh ac condimentum. Duis tincidunt, turpis et tincidunt euismod, ipsum quam finibus risus, non pharetra orci urna non nulla.</p>
+    					<a href="#" class="to_specials">SEE OUR SPECIALS</a>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    	<div class="right-side">
+    		<div class="right--wrap"></div>
+    	</div>
+    </div><!-- second__abot--block -->
+
+	<div class="product__toservice--block" id="third--product">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+          	<h4>Наши блюда</h4>
+            <ul class="tabs">
+              <li class="tab_item">Ролы</li>
+              <li class="tab_item">Сеты</li>
+            </ul>
+            <div class="tab__content--wrap">
+              <div class="tab_content_item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab_content_item">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="product__block--wrapper">
+                      <div class="product__thumb--wrap">
+                        <a href="#"><img src="img/product-test.jpeg" alt=""></a>
+                      </div>
+                      <div class="product-info">
+                        <h4 class="product_title"><a href="#">Lorem Ipsum</a></h4>
+                        <div class="description__block">
+                          <p class="weight">33 г</p>
+                          <p class="product_description">Lorem Ipsum Dolor sit amet</p>
+                        </div>
+                        <div class="price">35 грн</div>
+                        <button class="add_to--cart">Заказать</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- product__toservice--block -->
+
+
+    <!--
+    <div class="slider_wraper">
+      <div class="owl-carousel">
+          <div>
+            <img src="img/owl4.png" alt="first">
+            <div class="slider__text--wrap">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea quod dolorem error porro veritatis quia alias, quas maiores ut tempore sed adipisci rem nihil sequi eum animi, cumque! Corporis, illo.</p>
+              <a href="#" class="slider_link">Подробнее</a>
+            </div>
+          </div>
+          <div>
+            <img src="img/owl2.png" alt="second">
+            <div class="slider__text--wrap">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime quo aliquam exercitationem quod, assumenda illo at, soluta officia doloremque ipsa ratione velit, aspernatur animi laboriosam rem quos vel impedit vitae!</p>
+              <a href="#" class="slider_link">Подробнее</a>
+            </div>
+          </div>
+          <div>
+            <img src="img/owl3.png" alt="third">
+            <div class="slider__text--wrap">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et nostrum nam ex officia nulla in saepe nisi at beatae sit. Itaque, consectetur officiis. In velit rerum corrupti minus vel! Excepturi.</p>
+              <a href="#" class="slider_link">Подробнее</a>
+            </div>
+          </div>
+          <div>
+            <img src="img/owl1.png" alt="fourth">
+            <div class="slider__text--wrap">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis ipsam rem architecto, deleniti maiores voluptates sequi quis odit vero sapiente aliquid non provident neque quasi excepturi rerum consectetur quidem laboriosam!</p>
+              <a href="#" class="slider_link">Подробнее</a>
+            </div>
+          </div>
+      </div>
+    </div><!-- slider_wraper -->
+
+    <div class="coffee_delivery">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Lorem Ipsum</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, corrupti. Dolorem obcaecati dolore veritatis nemo atque corporis sequi dicta iure distinctio libero quae neque provident explicabo molestiae vitae, eligendi voluptas.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, corrupti. Dolorem obcaecati dolore veritatis nemo atque corporis sequi dicta iure distinctio libero quae neque provident explicabo molestiae vitae, eligendi voluptas.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, corrupti. Dolorem obcaecati dolore veritatis nemo atque corporis sequi dicta iure distinctio libero quae neque provident explicabo molestiae vitae, eligendi voluptas.</p>
+          </div>
+          <div class="col-md-6">
+            <form action="#">
+              <input type="text" placeholder="Имя *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Имя *'" />
+              <input type="text" placeholder="Телефон *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Телефон *'" />
+              <input type="text" placeholder="Адрес *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Адрес *'" />
+              <textarea cols="30" rows="7" placeholder="Сообщение" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Сообщение'" /></textarea>
+              <button class="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div><!-- coffee_delivery -->
+
+    <div class="services__underslider--block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="services_wrap">
+              <div class="services__img--wrap">
+                <img src="img/type-1.png" alt="">
+              </div>
+              <h4>Fruits</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, aliquam, sequi perspiciatis doloremque ut neque iusto aperiam error cumque commodi, officia nobis. Veritatis eligendi, nostrum, quibusdam natus nisi ea eos!</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services_wrap">
+              <div class="services__img--wrap">
+                <img src="img/type-2.png" alt="">
+              </div>
+              <h4>Sea food</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus magni harum soluta minima consequatur nam assumenda quia quo natus rem ipsa sit necessitatibus, omnis est, ad, inventore architecto voluptas id!</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services_wrap">
+              <div class="services__img--wrap">
+                <img src="img/type-3.png" alt="">
+              </div>
+              <h4>Vegetables</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci labore voluptatum recusandae vero minima optio in impedit sit sapiente aliquam excepturi numquam rem nostrum, aut expedita, dicta, doloribus iusto quo!</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="services_wrap">
+              <div class="services__img--wrap">
+                <img src="img/type-4.png" alt="">
+              </div>
+              <h4>Meat</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil culpa, pariatur porro eum. Consequatur quia molestias eligendi eveniet perferendis porro sed ratione amet earum autem, consectetur nisi quisquam, in quos.</p>
+            </div>
+          </div>
+        </div>
+      </div><!-- container -->
+    </div><!-- services__underslider--block -->
+
+
+    <div class="news_block">
+      <div class="container">
+        <h4 class="news_title">НОВОСТИ И АКЦИИ</h4>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="news__item--wrap">
+              <div class="post__thumb--wrap">
+                <a href="#"><img src="img/news_bg.jpeg"></a>
+              </div>
+              <div class="post__descr--wrap">
+                <a href="#"><h4>Lorem Ipsum</h4></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nobis autem iusto, aliquam recusandae magni sint ipsum facere voluptates necessitatibus</p>
+                <a href="#" class="to_article">Подробнее</a>
+              </div>  
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="news__item--wrap">
+              <div class="post__thumb--wrap">
+                <a href="#"><img src="img/news_bg.jpeg"></a>
+              </div>
+              <div class="post__descr--wrap">
+                <a href="#"><h4>Lorem Ipsum</h4></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, vero nam illum dicta. Dicta temporibus a debitis vitae autem, cumque soluta adipisci.</p>
+                <a href="#" class="to_article">Подробнее</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="news__item--wrap">
+              <div class="post__thumb--wrap">
+                <a href="#"><img src="img/news_bg.jpeg"></a>
+              </div>
+              <div class="post__descr--wrap">
+                <a href="#"><h4>Lorem Ipsum</h4></a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum sint odio, laborum. Nulla natus porro fugiat suscipit similique inventore repellendus nisi</p>
+                <a href="#" class="to_article">Подробнее</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- news_block -->
+
+    <div class="modal__button--block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="modal_wrap">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ad dolorem dignissimos tempore. Dolore ex quo eius, earum dolorum suscipit dignissimos in optio inventore explicabo repellat recusandae perferendis officia, dicta!</p>
+              <button class="open__modal--recall">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- modal__button--block -->
+
+    <div class="map_block">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d651.3011977751235!2d28.465599844560742!3d49.23460637440007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472d5b7cb254c2dd%3A0x804c9f528b74f3a!2z0YPQuy4g0JDRgNGF0LjRgtC10LrRgtC-0YDQsCDQkNGA0YLRi9C90L7QstCwLCA4LCDQktC40L3QvdC40YbQsCwg0JLQuNC90L3QuNGG0LrQsNGPINC-0LHQu9Cw0YHRgtGMLCAyMTAwMA!5e0!3m2!1sru!2sua!4v1515446731302" frameborder="0" style="border:0" allowfullscreen></iframe>
+      <div class="contact_card">
+                <div class="card-left">
+                  <p class="hide__effect--paragraph">г. Винница</p>
+                  <p class="hide__effect--paragraph">Архитектора Артынова 8</p>
+                </div>
+                <div class="card-right">
+                  <div class="card_phone">
+                    <p>Телефон</p>
+                    <a href="tel:+375 29 310-10-10">+38 (063) 000-00-00</a>
+                  </div>
+                  <div class="card_email">
+                    <p>E-mail</p>
+                    <a href="mailto:info@projector.by">info@example.com</a>
+                  </div>
+                  <div class="card_social">
+                    <p>Соц.сети:</p>
+                    <a href="#">Facebook</a>
+                    <a href="#">ВКонтакте</a>
+                  </div>
+                  <div class="contacts__buttons--wrap">
+                    <span class="contacts__hide--arrow"></span>
+                  </div>
+                </div>
+        </div>
+    </div>
+    
+  </section><!-- /section -->
+</div><!-- /wrapper -->
+
+<footer role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="footer_adress">
+        	  <p>Адрес:</p>
+              <p class="adress_paragraph">Архитектора Артынова 8г, Винница</p>
+              <p class="work_time"><span>Время работы: </span>(Пн-Вс) 10:30 -- 23:30</p>
+          </div>
+          <div class="footer_phones">
+          	<p>Телефоны:</p>
+          	<ul class="phones_list">
+          		<li><a href="tel:+38 (000) 000 00 00">+38 (000) 000 00 00</a></li>
+          		<li><a href="tel:+38 (000) 000 00 00">+38 (000) 000 00 00</a></li>
+          		<li><a href="tel:+38 (000) 000 00 00">+38 (000) 000 00 00</a></li>
+          	</ul>
+          </div>
+          <div class="footer_email">
+          	<p>Почта:</p>
+          	<a href="mailto:example@gmail.com">example@gmail.com</a>
+          </div>
+      </div>
+      <div class="col-md-4">
+      	<p class="footnav_title">Перейти к:</p>
+      	<ul class="footnav">
+      		<li><a href="#">Главная</a></li>
+      		<li><a href="#">О нас</a></li>
+      		<li><a href="#">Меню</a></li>
+      		<li><a href="#">Доставка и оплата</a></li>
+      		<li><a href="#">Контакты</a></li>
+      	</ul>
+      </div>
+      <div class="col-md-4">
+      	<div class="search_wrap">
+      		<p>Поиск по сайту:</p>
+      		<input type="search" class="search_input" placeholder="Поиск" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск'" />
+      		<button type="submit" class="search_submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+      	</div>
+      	<p class="social_title">Социальные сети:</p>
+      	<div class="footer_socials">
+                <a href="#"><img src="img/vk.png" alt=""></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div><!-- /.row -->
+  </div><!-- /.container -->
+   <div class="copyright-row">
+   	<div class="container">
+   		<div class="row">
+   			<p class="col-md-12">© 2018 Собственность. Работает на html5wp easy.</p>
+   		</div>
+   	</div>
+    </div>
+  <!-- Modals -->
+  <div class="modal_recall">
+    <div class="modal__recall--wrap">
+      <form action="#">
+        <h4>Оставьте свой номер, и мы вам перезвоним</h4>
+        <a href="#" class="close__modal--recall"><i class="fa fa-times" aria-hidden="true"></i></a>
+        <input type="text" placeholder="Имя *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Имя *'" />
+        <input type="tel" placeholder="Телефон *" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Телефон *'" />
+        <button type="submit" class="submit">Отправить</button>
+      </form>
+    </div> 
+  </div><!-- modal_recall -->
+
+  <!-- / Modals -->
+  <a href="#" class="scrollToTop"></a>
+
+</footer><!-- /footer -->
+
+  <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.js"></script>
+  <script type="text/javascript" src="js/scripts.js"></script>
+
+</body>
+</html>
