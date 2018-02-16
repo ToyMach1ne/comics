@@ -4569,6 +4569,278 @@ footer .scrollToTop:before {
   font-size: 15px;
 }
 
+.contacts header {
+  display: none;
+}
+
+.contacts .contact-wrapper .contact-top {
+  height: 90vh;
+  background-image: url(../img/contact_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.contacts .contact-wrapper .contact-top h1 {
+  margin: 0;
+  padding-left: 25%;
+  font-size: 75px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: .7;
+}
+
+.contacts .contact-wrapper .contact-top .contact-menu {
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  padding: 20px 0;
+  z-index: 2;
+  width: 213px;
+  background: rgba(51, 51, 51, 0.8);
+}
+
+.contacts .contact-wrapper .contact-top .contact-menu p {
+  font-size: 55px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.contacts .contact-wrapper .contact-top .contact-menu .contact-menu-list {
+  padding: 0;
+}
+
+.contacts .contact-wrapper .contact-top .contact-menu .contact-menu-list li a {
+  display: block;
+  padding: 5px 35px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: none;
+}
+
+.contacts .contact-wrapper .contact-top .contact-menu .contact-menu-list li:hover a {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contacts .contact-wrapper .contact-top .cont-menu_scroll {
+  display: none;
+}
+
+.contacts .contact-wrapper .contact-inner {
+  padding: 100px 0;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .contact-name {
+  font-size: 22px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block p {
+  font-size: 18px;
+  color: #000;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block p span {
+  display: block;
+  padding: 5px 0;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block p a {
+  color: #ff9100;
+  transition: none;
+  font-size: 16px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block p a:hover {
+  color: #000;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .contact-adress {
+  color: #ff9100;
+  display: block;
+  position: relative;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .contact-adress:before {
+  display: block;
+  font-family: fontAwesome;
+  content: '\f041';
+  position: absolute;
+  left: -25px;
+  color: #000;
+  font-size: 20px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts {
+  padding: 0;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts li {
+  list-style-type: none;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts li a {
+  display: block;
+  color: #000;
+  padding: 2px 0;
+  position: relative;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts li a:hover {
+  color: #ff9100;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts li a:hover:before {
+  color: #000;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .phones_list_contacts li a:before {
+  display: block;
+  font-family: fontAwesome;
+  content: '\f095';
+  position: absolute;
+  left: -25px;
+  top: 0;
+  color: #ff9100;
+  font-size: 20px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .email-contact {
+  display: inline-block;
+  position: relative;
+  color: #000;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .email-contact:before {
+  display: block;
+  font-family: fontAwesome;
+  content: "\f003";
+  position: absolute;
+  left: -25px;
+  color: #ff9100;
+  font-size: 20px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .email-contact:hover {
+  color: #ff9100;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .email-contact:hover:before {
+  color: #000;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .social-share {
+  padding: 10px 0;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .social-share p {
+  font-size: 16px;
+  display: inline-block;
+  font-weight: bold;
+  padding-right: 5px;
+  position: relative;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .social-share p:before {
+  display: block;
+  font-family: fontAwesome;
+  content: "\f14d";
+  position: absolute;
+  left: -25px;
+  top: 0;
+  color: #ff9100;
+  font-size: 20px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .social-share a {
+  width: 25px;
+  height: 25px;
+  background-color: #ff9100;
+  display: inline-block;
+  padding: 3px;
+  border-radius: 2px;
+}
+
+.contacts .contact-wrapper .contact-inner .adress-block .social-share a i {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span {
+  margin-bottom: 15px;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span input {
+  padding: 10px 5px;
+  width: 100%;
+  border-radius: 2px;
+  border: 1px solid #000;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span input:focus {
+  outline: none;
+  border-color: #ff9100;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span textarea {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form span textarea:focus {
+  outline: none;
+  border-color: #ff9100;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form .submit {
+  display: block;
+  height: 40px;
+  border: 0;
+  background: #ff9100;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 18px;
+  border-bottom: 4px solid #c77406;
+  transition: none;
+}
+
+.contacts .contact-wrapper .contact-inner .contact-form__wrap form .submit:hover {
+  border-bottom: 0;
+}
+
+.contacts .contact-wrapper .map-block iframe {
+  width: 100%;
+  height: 350px;
+}
+
 @font-face {
   font-family: 'Roboto Condensed';
   font-weight: 300;

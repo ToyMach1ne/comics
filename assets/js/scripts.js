@@ -124,3 +124,14 @@ $('.scrollToTop').hide();
 	});
 	
 });
+
+//Contact page menu visbility
+var contactScrollMenu = 200;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > contactScrollMenu){
+       $('.contact-menu').addClass('cont-menu_scroll');
+   } else if (st < contactScrollMenu) {
+     $('.contact-menu').removeClass('cont-menu_scroll');
+   }
+});
