@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.dev",
-  "theme": "wp-framework",
+  "domain": "comics.dev",
+  "theme": "wp-comics",
   "path": {
     "base": {
       "src":"assets/",
