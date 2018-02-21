@@ -124,7 +124,7 @@
       <div class="container">
         <div class="row">
           <div class="header--logo col-md-2">
-            <a href="#" class="order--online">
+            <a href="/shop.htm" class="order--online">
               <p>Заказать доставку</p>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="76.80511474609375 46.68406295776367 178.11782836914062 178.11972045898438" role="img" preserveAspectRatio="xMidYMid meet">
             <g>
@@ -144,6 +144,19 @@
            <nav class="nav header--nav col-md-7" role="navigation">
               <?php wpeHeadNav(); ?>
             </nav><!-- /header--nav -->
+             <div id="msMiniCart" class="header-cart">
+                <div class="header__cart--inner" id="shopping_button">
+                  <?php global $woocommerce; ?>
+                  <a class="your-class-name" href="/cart.htm" title="<?php _e('Корзина', 'woothemes'); ?>">
+                    <i class="fa fa-shopping-cart">
+                      <span class="items-count">
+                        <?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+                      </span>
+                    </i>
+                    <?php echo $woocommerce->cart->get_cart_total(); ?>
+                  </a>
+                </div>
+            </div>
         </div><!-- /.row -->
 
       </div><!-- /.container -->

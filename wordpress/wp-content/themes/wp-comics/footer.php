@@ -29,8 +29,7 @@
       <div class="col-md-4">
         <div class="search_wrap">
           <p>Поиск по сайту:</p>
-          <input type="search" class="search_input" placeholder="Поиск" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Поиск'" />
-          <button type="submit" class="search_submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          <?php echo do_shortcode('[smart_search id="1"]'); ?>
         </div>
         <p class="social_title">Социальные сети:</p>
         <div class="footer_socials">

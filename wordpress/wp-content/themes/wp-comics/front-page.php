@@ -176,7 +176,7 @@
       <div class="container">
         <h4 class="news_title">НОВОСТИ И АКЦИИ</h4>
         <div class="row">
-        <?php query_posts("showposts=3&exclude=1116"); ?>
+        <?php query_posts("showposts=3"); ?>
          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
           <div class="col-md-4">
             <div class="news__item--wrap">
@@ -205,7 +205,7 @@
         <div class="row">
           <div class="col-md-12">
             <div class="modal_wrap">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit ad dolorem dignissimos tempore. Dolore ex quo eius, earum dolorum suscipit dignissimos in optio inventore explicabo repellat recusandae perferendis officia, dicta!</p>
+              <p><?php the_field('modal_window_text'); ?></p>
               <button class="open__modal--recall">Заказать</button>
             </div>
           </div>
@@ -231,8 +231,8 @@
                   </div>
                   <div class="card_social">
                     <p>Соц.сети:</p>
-                    <a href="#">Facebook</a>
-                    <a href="#">ВКонтакте</a>
+                    <a href="https://www.facebook.com/groups/1322097464602508/" target="_blank">Facebook</a>
+                    <a href="https://vk.com/public158430723" target="_blank">ВКонтакте</a>
                   </div>
                   <div class="contacts__buttons--wrap">
                     <span class="contacts__hide--arrow"></span>

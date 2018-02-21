@@ -163,7 +163,7 @@ function wpeSideNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="contact-menu-list">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -289,8 +289,8 @@ function html5wp_pagination() {
       'base' => str_replace($big, '%#%', get_pagenum_link($big)),
       'format' => '?paged=%#%',
       'current' => max(1, get_query_var('paged')),
-      'prev_text' => __('« Previous'),
-      'next_text' => __('Next »'),
+      'prev_text' => __('« Пред'),
+      'next_text' => __('След »'),
       'total' => $wp_query->max_num_pages
     )
   );
@@ -686,5 +686,21 @@ function disable_emojicons_tinymce( $plugins ) {
 //Change button text
 add_filter( 'woocommerce_product_add_to_cart_text', 'woo_archive_custom_cart_button_text' );    // 2.1 +
 function woo_archive_custom_cart_button_text() { return __( 'Заказать', 'woocommerce' ); }
+
+//add to cart after ajax quantity
+add_filter('add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment');
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+  global $woocommerce; ob_start(); ?>
+   <a class="your-class-name" href="/cart.htm" title="<?php _e('Корзина', 'woothemes'); ?>">
+                    <i class="fa fa-shopping-cart">
+                      <span class="items-count">
+                        <?php echo sprintf(_n('%d item', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
+                      </span>
+                    </i>
+                    <?php echo $woocommerce->cart->get_cart_total(); ?>
+                  </a>
+  <?php $fragments['a.your-class-name'] = ob_get_clean();
+  return $fragments;
+}
 
 ?>
