@@ -143,8 +143,7 @@
           </div>
            <nav class="nav header--nav col-md-7" role="navigation">
               <?php wpeHeadNav(); ?>
-            </nav><!-- /header--nav -->
-             <div id="msMiniCart" class="header-cart">
+              <div id="msMiniCart" class="header-cart">
                 <div class="header__cart--inner" id="shopping_button">
                   <?php global $woocommerce; ?>
                   <a class="your-class-name" href="/cart.htm" title="<?php _e('Корзина', 'woothemes'); ?>">
@@ -156,7 +155,8 @@
                     <?php echo $woocommerce->cart->get_cart_total(); ?>
                   </a>
                 </div>
-            </div>
+              </div>
+            </nav><!-- /header--nav -->
         </div><!-- /.row -->
 
       </div><!-- /.container -->

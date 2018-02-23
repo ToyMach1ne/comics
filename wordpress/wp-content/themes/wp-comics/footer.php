@@ -31,12 +31,14 @@
           <p>Поиск по сайту:</p>
           <?php echo do_shortcode('[smart_search id="1"]'); ?>
         </div>
-        <p class="social_title">Социальные сети:</p>
-        <div class="footer_socials">
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/vk.png" alt=""></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <div class="social-wrap">
+          <p class="social_title">Соц сети:</p>
+          <div class="footer_socials">
+                  <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/vk.png" alt=""></a>
+                  <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </div>
         </div>
       </div>
     </div><!-- /.row -->
