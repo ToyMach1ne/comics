@@ -123,7 +123,8 @@
     <div class="header__position--wrap">
       <div class="container">
         <div class="row">
-          <div class="header--logo col-md-2">
+          <a href="#" class="open-menu"></a>
+          <div class="header--logo col-md-2 col-sm-2">
             <a href="/shop.htm" class="order--online">
               <p>Заказать доставку</p>
                <svg xmlns="http://www.w3.org/2000/svg" viewBox="76.80511474609375 46.68406295776367 178.11782836914062 178.11972045898438" role="img" preserveAspectRatio="xMidYMid meet">
@@ -133,7 +134,7 @@
         </svg>
             </a>
           </div><!-- /header--logo -->
-          <div class="col-md-3 header_info">
+          <div class="col-md-3 col-sm-4 header_info">
             <div class="header_phones">
               <?php if( have_rows('header_phones', 38) ): while ( have_rows('header_phones', 38) ) : the_row(); ?>
               <a href="tel:<?php the_sub_field('sub_field_name'); ?>"><?php the_sub_field('header_phone', 38); ?></a>
@@ -141,7 +142,7 @@
               <span class="open--phones"><i class="fa fa-angle-double-down" aria-hidden="true"></i></span>
             </div>
           </div>
-           <nav class="nav header--nav col-md-7" role="navigation">
+           <nav class="nav header--nav col-md-7 col-sm-6" role="navigation">
               <?php wpeHeadNav(); ?>
               <div id="msMiniCart" class="header-cart">
                 <div class="header__cart--inner" id="shopping_button">

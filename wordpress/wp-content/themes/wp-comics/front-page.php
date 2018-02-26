@@ -83,7 +83,7 @@
                 <div class="row">
                 <?php $args = array( 'post_type' => 'product', 'posts_per_page' => 9, 'product_cat' => 'roly', 'orderby' => 'ASC' ); $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6">
                       <div class="product__block--wrapper">
                         <div class="product__thumb--wrap">
                           <?php woocommerce_show_product_sale_flash( $post, $product ); ?>
@@ -109,7 +109,7 @@
                 <div class="row">
                 <?php $args = array( 'post_type' => 'product', 'posts_per_page' => 9, 'product_cat' => 'seti', 'orderby' => 'ASC' ); $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post(); global $product; ?>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-6">
                       <div class="product__block--wrapper">
                         <div class="product__thumb--wrap">
                           <?php woocommerce_show_product_sale_flash( $post, $product ); ?>
@@ -140,11 +140,11 @@
     <div class="coffee_delivery">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-6">
             <h4><?php the_field('contact_title'); ?></h4>
             <p><?php the_field('contact_text'); ?></p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-6">
             <?php echo do_shortcode('[contact-form-7 id="55" title="Контактная форма 1"]'); ?>
           </div>
         </div>
@@ -157,7 +157,7 @@
         <?php if( have_rows('food_block_rep') ):  while( have_rows('food_block_rep') ): the_row();
         // vars
         $image = get_sub_field('food_img'); ?>
-          <div class="col-md-3">
+          <div class="col-md-3 col-sm-3">
             <div class="services_wrap">
               <div class="services__img--wrap">
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'] ?>" />
@@ -178,7 +178,7 @@
         <div class="row">
         <?php query_posts("showposts=3"); ?>
          <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-          <div class="col-md-4">
+          <div class="col-md-4 col-sm-4">
             <div class="news__item--wrap">
               <div class="post__thumb--wrap">
                 <a href="<?php the_permalink(); ?>">
@@ -189,7 +189,7 @@
               </div>
               <div class="post__descr--wrap">
                 <a href="<?php the_permalink(); ?>"><h4><?php the_title(); ?></h4></a>
-                <p><?php wpeExcerpt('wpeExcerpt20'); ?></p>
+                <?php wpeExcerpt('wpeExcerpt10'); ?>
                 <a href="<?php the_permalink(); ?>" class="to_article">Подробнее</a>
               </div>
             </div>

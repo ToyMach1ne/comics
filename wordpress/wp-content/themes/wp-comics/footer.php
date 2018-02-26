@@ -1,7 +1,7 @@
  <footer role="contentinfo">
   <div class="container">
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="footer_adress">
             <p>Адрес:</p>
               <p class="adress_paragraph"><?php the_field('footer_adress', 38); ?></p>
@@ -20,13 +20,13 @@
             <a href="mailto:example@gmail.com"><?php the_field('footer_email', 38); ?></a>
           </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <p class="footnav_title">Перейти к:</p>
         <nav class="footernav">
           <?php wpeFootNav(); ?>
         </nav>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 col-sm-4">
         <div class="search_wrap">
           <p>Поиск по сайту:</p>
           <?php echo do_shortcode('[smart_search id="1"]'); ?>

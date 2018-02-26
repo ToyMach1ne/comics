@@ -24,10 +24,7 @@
            <a href="mailto:<?php the_field('contact_page_email'); ?>" class="email-contact"><?php the_field('contact_page_email'); ?></a>
            <div class="social-share">
                 <p>Поделится:</p>
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/vk.png" alt=""></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <?php echo do_shortcode('[social_warfare]'); ?>
            </div>
           </div>
           <div class="col-md-6 contact-form__wrap">

@@ -703,4 +703,70 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
   return $fragments;
 }
 
+//Количество людей (checkout page)
+add_filter( 'woocommerce_checkout_fields' , 'custom_override_checkout_fields' );
+  
+function custom_override_checkout_fields( $fields ) {
+  unset($fields['billing']['billing_company']);
+  unset($fields['billing']['billing_city']);
+  unset($fields['billing']['billing_postcode']);
+  unset($fields['billing']['billing_country']);
+  unset($fields['billing']['billing_state']);
+  $fields['billing']['billing_first_name']['label'] = __('Имя:  ', 'woocommerce');
+  $fields['billing']['billing_last_name']['label'] = __('Фамилия:  ', 'woocommerce');
+  $fields['billing']['billing_address_1']['label'] = __('Адрес:  ', 'woocommerce');
+  $fields['billing']['billing_address_1']['placeholder'] = 'Улица';
+  $fields['billing']['billing_address_2']['placeholder'] = 'Дом и квартира';
+  $fields['billing']['billing_phone']['label'] = __('Телефон:  ', 'woocommerce');
+  $fields['billing']['billing_email']['label'] = __('Почта:  ', 'woocommerce');
+  $fields['order']['order_comments']['label'] = __('Примечания к закаазу:  ', 'woocommerce');
+  $fields['order']['order_comments']['placeholder'] = 'Напишите пожелания к доставке';
+  $fields['billing']['billing_person'] = array(
+        'label'     => __('Кол-во человек:', 'woocommerce'),
+        'placeholder'   => _x('Количество', 'placeholder', 'woocommerce'),
+        'required'  => false,
+        'class'     => array('form-row-person'),
+        'clear'     => true
+         );
+ 
+    return $fields;
+}
+
+
+
+//Количество людей (в админ панель)
+add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
+
+function my_custom_checkout_field_process() {
+    // Check if set, if its not set add an error.
+    if ( ! $_POST['billing_person'] )
+        wc_add_notice( __( 'Phone 2 is compulsory. Please enter a value' ), 'error' );
+}
+add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
+
+function my_custom_checkout_field_update_order_meta( $order_id ) {
+    if ( ! empty( $_POST['billing_person'] ) ) {
+        update_post_meta( $order_id, 'billing_person', sanitize_text_field( $_POST['billing_person'] ) );
+    }
+}
+add_action( 'woocommerce_admin_order_data_after_billing_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+
+function my_custom_checkout_field_display_admin_order_meta($order){
+    echo '<p><strong>'.__('Кол-во людей:').'</strong> <br/>' . get_post_meta( $order->id, 'billing_person', true ) . '</p>';
+}
+
+
+
+add_filter('gettext', 'wpse_124400_woomessages', 10, 3);
+
+function wpse_124400_woomessages($translation, $text, $domain) {
+    if ($domain == 'woocommerce') {
+        if ($text == 'Cart updated.') {
+            $translation = 'Корзина обновлена';
+        }
+    }
+
+    return $translation;
+}
+
 ?>

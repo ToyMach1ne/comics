@@ -135,3 +135,18 @@ $(window).scroll(function(event){
      $('.contact-menu').removeClass('cont-menu_scroll');
    }
 });
+
+$('#order_review_heading').html('Ваш заказ');
+$('#place_order').html('Оформить заказ');
+
+//Mobile menu
+$( ".open-menu" ).click(function(e) {
+  e.preventDefault();
+  $( ".headnav" ).toggle( 400, function() {});
+  $(this).toggleClass('open__menu--slide');
+});
+
+$('.header_info').click(function(e) {
+  e.preventDefault();
+  $( ".header_phones" ).toggle( 400, function() {});
+});

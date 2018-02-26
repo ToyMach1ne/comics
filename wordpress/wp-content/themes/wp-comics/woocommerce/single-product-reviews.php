@@ -33,7 +33,7 @@ if ( ! comments_open() ) {
 				/* translators: 1: reviews count 2: product name */
 				printf( esc_html( _n( '%1$s review for %2$s', '%1$s reviews for %2$s', $count, 'woocommerce' ) ), esc_html( $count ), '<span>' . get_the_title() . '</span>' );
 			} else {
-				_e( 'Reviews', 'woocommerce' );
+				_e( 'Отзывы', 'woocommerce' );
 			}
 		?></h2>
 
@@ -55,7 +55,7 @@ if ( ! comments_open() ) {
 
 		<?php else : ?>
 
-			<p class="woocommerce-noreviews"><?php _e( 'There are no reviews yet.', 'woocommerce' ); ?></p>
+			<p class="woocommerce-noreviews"><?php _e( 'Отзывов пока нет.', 'woocommerce' ); ?></p>
 
 		<?php endif; ?>
 	</div>
@@ -68,18 +68,18 @@ if ( ! comments_open() ) {
 					$commenter = wp_get_current_commenter();
 
 					$comment_form = array(
-						'title_reply'          => have_comments() ? __( 'Add a review', 'woocommerce' ) : sprintf( __( 'Be the first to review &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
-						'title_reply_to'       => __( 'Leave a Reply to %s', 'woocommerce' ),
+						'title_reply'          => have_comments() ? __( 'Добавить отзыв', 'woocommerce' ) : sprintf( __( 'Будьте первым кто оставил отзыв &ldquo;%s&rdquo;', 'woocommerce' ), get_the_title() ),
+						'title_reply_to'       => __( 'Оставить отзыв  %s', 'woocommerce' ),
 						'title_reply_before'   => '<span id="reply-title" class="comment-reply-title">',
 						'title_reply_after'    => '</span>',
 						'comment_notes_after'  => '',
 						'fields'               => array(
-							'author' => '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Name', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
+							'author' => '<p class="comment-form-author">' . '<label for="author">' . esc_html__( 'Имя', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
 										'<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30" aria-required="true" required /></p>',
-							'email'  => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Email', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
+							'email'  => '<p class="comment-form-email"><label for="email">' . esc_html__( 'Почта', 'woocommerce' ) . ' <span class="required">*</span></label> ' .
 										'<input id="email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30" aria-required="true" required /></p>',
 						),
-						'label_submit'  => __( 'Submit', 'woocommerce' ),
+						'label_submit'  => __( 'Подтвердить', 'woocommerce' ),
 						'logged_in_as'  => '',
 						'comment_field' => '',
 					);
