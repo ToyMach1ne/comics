@@ -1,7 +1,7 @@
 <?php $classes = get_body_class();
 if (in_array('search',$classes)) { ?>
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-  <div  <?php post_class('col-md-4'); ?>>
+  <div  <?php post_class('col-md-4 col-sm-6'); ?>>
     <div class="single__item--wrap">
       <div class="product__thumb--wrap">
         <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
@@ -25,7 +25,7 @@ if (in_array('search',$classes)) { ?>
 
 else { ?>
     <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-  <div id="post-<?php the_ID(); ?>" <?php post_class('looper col-md-4'); ?>>
+  <div id="post-<?php the_ID(); ?>" <?php post_class('looper col-md-4 col-sm-6'); ?>>
     <div class="article_item single__item--wrap">
         <?php if ( has_post_thumbnail()) { ?>
           <img src="<?php echo the_post_thumbnail_url('medium'); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />

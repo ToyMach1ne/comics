@@ -26,7 +26,7 @@
           <div class="row">
           <?php query_posts("showposts=3"); ?>
           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <div class="col-md-4">
+            <div class="col-md-4 col-sm-4">
             <div class="relative__item--wrap">
               <div class="relative__thumb--wrap">
                 <a href="<?php the_permalink(); ?>">

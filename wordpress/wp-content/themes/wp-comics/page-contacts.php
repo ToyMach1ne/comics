@@ -12,7 +12,7 @@
     <div class="contact-inner">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 adress-block">
+          <div class="col-md-6 col-sm-6 adress-block">
             <p class="contact-name">Comics Cafe</p>
             <p class="contact-adress"><?php the_field('contact_page_adress'); ?></p>
             <ul class="phones_list_contacts">
@@ -27,7 +27,7 @@
                 <?php echo do_shortcode('[social_warfare]'); ?>
            </div>
           </div>
-          <div class="col-md-6 contact-form__wrap">
+          <div class="col-md-6 col-sm-6 contact-form__wrap">
             <?php echo do_shortcode('[contact-form-7 id="163" title="contact page form"]'); ?>
           </div>
         </div>

@@ -146,7 +146,9 @@ $( ".open-menu" ).click(function(e) {
   $(this).toggleClass('open__menu--slide');
 });
 
-$('.header_info').click(function(e) {
+if ($(window).width() < 500) {
+  $('.header_info').click(function(e) {
   e.preventDefault();
   $( ".header_phones" ).toggle( 400, function() {});
 });
+}

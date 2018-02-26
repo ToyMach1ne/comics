@@ -27,7 +27,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div  <?php post_class('col-md-4'); ?>>
+<div  <?php post_class('col-md-4 col-sm-6'); ?>>
 <div class="single__item--wrap">
       <div class="product__thumb--wrap">
         <?php do_action( 'woocommerce_before_shop_loop_item_title' ); ?>
