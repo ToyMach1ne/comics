@@ -13,10 +13,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display");
-@import url("https://fonts.googleapis.com/css?family=Monoton");
-@import url("https://fonts.googleapis.com/css?family=Chewy");
-@import url("https://fonts.googleapis.com/css?family=Yeseva+One");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -2639,6 +2635,13 @@ header .header--logo img {
   color: #fff;
   font-weight: bold;
   transition: .5s all ease-out;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .header__position--wrap .header--logo a svg {
@@ -4099,6 +4102,8 @@ footer .scrollToTop:before {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .shop .top__title--wrap h1, .roly .top__title--wrap h1, .seti .top__title--wrap h1, .search .top__title--wrap h1 {
@@ -4113,6 +4118,7 @@ footer .scrollToTop:before {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   padding: 10px 0;
+  left: 0;
 }
 
 .shop .top__title--wrap .cat__menu--wrap .cat__menu--list, .roly .top__title--wrap .cat__menu--wrap .cat__menu--list, .seti .top__title--wrap .cat__menu--wrap .cat__menu--list, .search .top__title--wrap .cat__menu--wrap .cat__menu--list {
@@ -4377,6 +4383,8 @@ footer .scrollToTop:before {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .category .blog__top--baner .cat_title {
@@ -4446,6 +4454,8 @@ footer .scrollToTop:before {
   transition: .8s all;
   opacity: 0;
   position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .category .articles_wrap .col-md-4 .article_item a .article_info_wrap {
@@ -4559,6 +4569,8 @@ footer .scrollToTop:before {
   position: absolute;
   width: 100%;
   height: 100%;
+  left: 0;
+  top: 0;
 }
 
 .single .article__top--banner .article--title {
@@ -5056,6 +5068,7 @@ footer .scrollToTop:before {
   color: #fff;
   background: linear-gradient(to bottom, #fd992a, #fd6420);
   transition: none;
+  line-height: 1;
 }
 
 .cart .cart-inner .cart_totals .wc-proceed-to-checkout a:hover {
@@ -5340,6 +5353,7 @@ footer .scrollToTop:before {
   color: #fff;
   font-size: 18px;
   padding: 0 5px;
+  transition: .3s all ease-out;
 }
 
 #msMiniCart .your-class-name i .items-count {
@@ -5352,6 +5366,7 @@ footer .scrollToTop:before {
   position: absolute;
   left: -5px;
   top: 10px;
+  transition: .3s all ease-out;
 }
 
 #msMiniCart .your-class-name .woocommerce-Price-amount {
@@ -5372,7 +5387,7 @@ footer .scrollToTop:before {
 }
 
 .checkout {
-  background: #495C70;
+  background: #333;
   color: #fff;
 }
 
@@ -5383,6 +5398,10 @@ footer .scrollToTop:before {
 
 .checkout .checkout-wrap {
   padding: 100px 0;
+}
+
+.checkout .checkout-wrap .woocommerce-billing-fields h3 {
+  font-size: 22px;
 }
 
 .checkout .checkout-wrap .woocommerce-info {
@@ -5475,6 +5494,9 @@ footer .scrollToTop:before {
 }
 
 @media screen and (max-width: 770px) {
+  .load__screen--wrapp {
+    display: none;
+  }
   .header__position--wrap {
     padding-top: 0;
   }

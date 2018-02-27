@@ -47,14 +47,12 @@ $(".tabs .tab_item").click(function() {
 }).eq(0).addClass("current");
 
 //Modals
-$( ".open__modal--recall" ).click(function() {
-  event.preventDefault();
-  $('.modal_recall').fadeIn( "400", function() {
-    
-  });
+$( ".open__modal--recall" ).click(function(e) {
+  e.preventDefault();
+  $('.modal_recall').fadeIn( "400", function() {});
 });
-$('.close__modal--recall').click(function() {
-  event.preventDefault();
+$('.close__modal--recall').click(function(e) {
+  e.preventDefault();
   $('.modal_recall').fadeOut( "400", function() {
     
   });

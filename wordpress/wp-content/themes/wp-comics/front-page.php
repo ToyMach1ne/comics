@@ -2,7 +2,7 @@
 
   <section role="main">
 
-    <!-- <div class="load__screen--wrapp">
+    <div class="load__screen--wrapp">
       <div class="load__content--wrap">
         <div class="load__text--wrap">
           <h4>Comics</h4>
@@ -29,7 +29,7 @@
           <?php endif; ?>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <div class="first__block--wrap">
       <h1><?php the_field('first_title'); ?></h1>

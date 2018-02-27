@@ -22,7 +22,11 @@
   <!-- css + javascript -->
 
   <style text="css">
-    .load__screen--wrapp {
+  @import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave+Display');
+  @import url('https://fonts.googleapis.com/css?family=Monoton');
+  @import url('https://fonts.googleapis.com/css?family=Chewy');
+  @import url('https://fonts.googleapis.com/css?family=Yeseva+One');
+  .load__screen--wrapp {
   background-color: #00aeee;
   height: 100vh;
   width: 100%;
