@@ -95,6 +95,13 @@ $('.to_second').click(function(e) {
 	 $('html,body').animate({
         scrollTop: $("#second--about").offset().top + blockPosition
     },'slow');
+
+if ($(window).width() < 500) {
+    var blockPosition = -50;
+   $('html,body').animate({
+        scrollTop: $("#second--about").offset().top + blockPosition
+    },'slow');
+}
 });
 
 $('.to_specials').click(function(e) {
@@ -103,6 +110,12 @@ $('.to_specials').click(function(e) {
 	 $('html,body').animate({
         scrollTop: $("#third--product").offset().top + thirdPosition
     },'slow');
+   if ($(window).width() < 500) {
+    var thirdPosition = 0;
+     $('html,body').animate({
+          scrollTop: $("#third--product").offset().top + thirdPosition
+      },'slow');
+   }
 });
 
 //Scroll to top
